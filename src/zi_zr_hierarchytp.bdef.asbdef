@@ -1,0 +1,29 @@
+interface;
+use draft;
+
+define behavior for ZI_ZR_HIERARCHYTP alias ZR_HIERARCHY
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+  use association _ZI_CHILDHIERARCHY { create; with draft; }
+}
+
+define behavior for ZI_CHILDHIERARCHYTP alias ZI_CHILDHIERARCHY
+use etag
+
+{
+  use update;
+  use delete;
+
+  use association _ZR_HIERARCHY { with draft; }
+}

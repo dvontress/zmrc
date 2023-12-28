@@ -46,7 +46,7 @@ annotate view ZZ_C_ReplyTable with
    {
     id: 'idLineitem2',
     type: #LINEITEM_REFERENCE,
-    label: 'Relations',
+    label: 'MRC',
     position: 30 ,
     targetElement: '_mrc_build'
   }

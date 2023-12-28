@@ -8,7 +8,7 @@ define view entity ZZ_C_MRCBUILD
   key MRCBuildUUID,
       Sequence,
       MRCUUID,
-
+      MRCCode,
       @Consumption.valueHelpDefinition: [{ entity: { name: 'ZZ_I_REPLYTABLE', element: 'ReplyTableUUID'} }]
       @ObjectModel.text.element: ['ReplyTable']
       ReplyTableUUID,

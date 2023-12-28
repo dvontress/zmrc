@@ -2,10 +2,10 @@
 @UI: {
   headerInfo: {
     typeName: 'MRC Relation',
-    typeNamePlural: 'MRC Relations',
+    typeNamePlural: 'MRC Replytables',
     title: {
       type: #STANDARD,
-      label: 'MRC Relations',
+      label: 'MRC Replytable',
       value: 'MRCBuildUUID'
     }
   },
@@ -46,37 +46,48 @@ annotate view ZZ_C_MRCBUILD with
 
   @UI.lineItem: [ { position: 30 ,importance: #HIGH } ]
   @UI.identification: [ { position: 30} ]
-  @EndUserText.label: 'Reply Table ID'
+  @EndUserText.label: 'Reply Table UUID'
   ReplyTableUUID;
-
+  
   @UI.lineItem: [ { position: 40 ,importance: #HIGH } ]
   @UI.identification: [ { position: 40} ]
+  @EndUserText.label: 'Reply Table'
+  ReplyTable;
+  
+  //@UI.lineItem: [ { position: 50 ,importance: #HIGH } ]
+  //@UI.identification: [ { position: 50} ]
+  //@EndUserText.label: 'MRC Code'
+  //MRCCode;
+  
+
+  @UI.lineItem: [ { position: 60 ,importance: #HIGH } ]
+  @UI.identification: [ { position: 60} ]
   @EndUserText.label: 'Is Temporary'
   IsTemporary;
   
 
   @UI.identification: [ {
-    position: 50
+    position: 70
   } ]
   @EndUserText.label: 'Created By'
   CreatedBy;
   
 
   @UI.identification: [ {
-    position: 60
+    position: 80
   } ]
    @EndUserText.label: 'Created At'
   CreatedAt;
 
   @UI.identification: [ {
-    position: 70
+    position: 90
   } ]
   @EndUserText.label: 'Changed By'
-  LastChangedBy;
-  
+  LastChangedBy;    
+      
 
   @UI.identification: [ {
-    position: 80
+    position: 100
   } ]
    @EndUserText.label: 'Changed At'
   LastChangedAt;
